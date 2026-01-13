@@ -395,10 +395,7 @@ static unsigned int hclc_number(char **eq, double *res)
 		return 4;
 
 	while(*eq[0] != 0 && hclc_is_whitespace(*eq[0]))
-	{
-		putc(*eq[0], stdout);
 		*eq = *eq + 1;
-	}
 
 	unsigned int err = 0;
 	if(!(err = hclc_grouping(eq, res)))
